@@ -1,38 +1,196 @@
-.App {
-  text-align: center;
+.header {
+  border-bottom: 2px solid black;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  width: 4rem;
+  aspect-ratio: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-button {
+  background-color: rgba(255, 165, 0, 0.8);
+  font-size: 1.125rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 1rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.6rem;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.header-button:hover {
+  background-color: rgba(255, 165, 0, 0.6);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ----------------------- main -----------------------*/
+
+.main-section {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr;
+  height: 88vh;
+}
+.main-navigation {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-right: 2px solid black;
+  height: 100%;
+  gap: 2rem;
+}
+.main-navigation-button {
+  margin: 2rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  background: none;
+  transition: 0.5s all;
+  cursor: pointer;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.main-navigation-button:hover {
+  color: rgba(255, 165, 0, 0.6);
+}
+.button-color {
+  color: rgba(255, 165, 0, 0.6);
+}
+
+/* ----------------------- home -----------------------*/
+
+.home {
+  text-align: center;
+}
+.home h1 {
+  font-weight: 600;
+  margin: 2rem 0;
+}
+.home button {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+.home button img {
+  width: 200px;
+}
+.home-classes {
+  display: flex;
+  margin: 4rem;
+  gap: 4rem;
+  justify-content: flex-start;
+}
+.home-classes p:nth-of-type(1) {
+  color: rgba(255, 165, 0, 0.6);
+  font-size: 1.25rem;
+}
+.home-classes-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+@media (max-width: 768px) {
+  .home-classes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+/* ----------------------- classes -----------------------*/
+.classes {
+  text-align: center;
+}
+.classes button {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+.classes button img {
+  width: 200px;
+}
+
+.classesPage-classes {
+  display: flex;
+  margin: 4rem;
+  gap: 4rem;
+  justify-content: center;
+}
+.classesPage-classes-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.classes .class-name {
+  color: rgba(255, 165, 0, 0.6);
+}
+.classes .class-contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .classesPage-classes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .classes .class-contents {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----------------------- add class -----------------------*/
+.add-class h2{
+  margin-left: 2rem;
+}
+
+.select {
+  text-align: center;
+  color: #2a93d5;
+  border: 3px solid #2a93d5;
+  border-radius: 1rem;
+  margin: 2rem;
+  outline: none;
+  font-weight: 700;
+  width: 170px;
+  height: 25px;
+  position: relative;
+}
+.select p {
+  position: relative;
+  top: -0.75rem;
+}
+.select button {
+  border: none;
+  background: none;
+  position: absolute;
+  cursor: pointer;
+  color: #2a93d5;
+  right: 0rem;
+  top: -0.4rem;
+}
+.options {
+  width: 100%;
+  top: 2rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.select-option {
+  text-align: center;
+  margin-top: 0.25rem;
   color: white;
+  padding: 0.25rem 0;
+  border-radius: 1rem;
+  background: #2a93d5;
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.hide {
+  display: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display {
+  display: block;
 }
