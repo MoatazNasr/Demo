@@ -21,7 +21,7 @@ const Videos = () => {
       })
       .catch(() => {
       });
-  }, []);
+  }, [location.state.chapterName,location.state.className]);
   return (
     <>
       <NavLink to={-1} className="navlink">

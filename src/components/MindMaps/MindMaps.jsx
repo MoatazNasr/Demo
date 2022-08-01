@@ -21,7 +21,7 @@ const MindMaps = () => {
         setMindMaps(Object.entries(data[0].data));
       })
       .catch(() => {});
-  }, []);
+  }, [location.state.chapterName,location.state.className]);
   return (
     <>
       <NavLink to={-1} className="navlink">
@@ -35,7 +35,7 @@ const MindMaps = () => {
           mindmaps.map((mindmapsData, index) => (
             <div key={Math.random() + index}>
               <h2>{mindmapsData[1][1]}</h2>
-              <img src={mindmapsData[1][0]} className="class-mindmap" />
+              <img src={mindmapsData[1][0]} className="class-mindmap" alt={mindmapsData[1][1]}/>
             </div>
           ))
         ) : (
