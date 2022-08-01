@@ -30,7 +30,7 @@ const AddClasses = () => {
         setFirebaseChapters(notSelectedChapters);
       });
     }
-  }, [classX,window.localStorage.getItem('classes')]);
+  }, []);
   const chooseClass = (className) => {
     setClassX(className);
     setOnClassClick(false);
