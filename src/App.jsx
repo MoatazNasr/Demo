@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom";
-import "./app.css";
+import "./App.css";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import NoteAddOutlinedIcon from "@mui/icons-material/NoteAddOutlined";
