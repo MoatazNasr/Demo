@@ -1,0 +1,14 @@
+.classes {
+  margin: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: white;
+  text-align: center;
+  column-gap: 4rem;
+}
+.classes div {
+  cursor: pointer;
+}
+.classes div img {
+  width: 80%;
+}

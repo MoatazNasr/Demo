@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+body {
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 0.65fr 3.5fr;
+  box-sizing: content-box;
+  height: 100vh;
+  width: 100%;
+  color: white;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.background-video {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* -------------------tabs----------------- */
+.tabs {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+}
+.logo {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 50px;
+}
+.tabs ul {
+  margin: 4rem 2rem;
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3rem;
+}
+.links a {
+  text-decoration: none;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: white;
+  overflow: hidden;
+}
+.links svg {
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  padding: 0.75rem;
+  transition: 0.25s;
+  border: 3px solid transparent;
+  color: white;
+}
+.home-link svg {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
+      padding-box,
+    linear-gradient(to right, #00c853, #b2ff59) border-box;
+}
+.home-link:hover svg {
+  background: linear-gradient(to right, #00c853, #b2ff59) padding-box,
+    linear-gradient(to right, #00c853, #b2ff59) border-box;
+  color: white;
+}
+.classes-link svg {
+  transform: rotateZ(270deg);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
+      padding-box,
+    linear-gradient(to right, darkblue, darkorchid) border-box;
+}
+.classes-link:hover svg {
+  background: linear-gradient(to right, darkblue, darkorchid) padding-box,
+    linear-gradient(to right, darkblue, darkorchid) border-box;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.addclasses-link svg {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
+      padding-box,
+    linear-gradient(to right, orange, yellow) border-box;
+}
+.addclasses-link:hover svg {
+  background: linear-gradient(to right, orange, yellow) padding-box,
+    linear-gradient(to right, orange, yellow) border-box;
+  color: white;
+}
+.profile-link svg {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))
+      padding-box,
+    linear-gradient(to right, yellow, pink) border-box;
+}
+.profile-link:hover svg {
+  background: linear-gradient(to right, yellow, pink) padding-box,
+    linear-gradient(to right, yellow, pink) border-box;
+  color: white;
+}
+/* -------------------content----------------- */
+.content {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* navlink */
+.navlink {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  top: 0.5rem;
+  left: 1rem;
+}
+
+/* no data */
+.no-data{
+  width: 100vw;
 }

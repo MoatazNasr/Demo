@@ -1,0 +1,25 @@
+.class {
+  cursor: pointer;
+}
+.class img {
+  width: 80%;
+}
+
+.class-name {
+  text-align: center;
+}
+.class-content {
+  margin: 1rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+  color: white;
+  text-align: center;
+}
+.class-content div img {
+  width: 95%;
+  aspect-ratio: 1/0.9;
+}
+.class-content div {
+  cursor: pointer;
+}

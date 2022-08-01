@@ -1,0 +1,22 @@
+.mindmaps-headline {
+    text-align: center;
+  }
+  .class-mindmaps {
+    display: grid;
+    margin: 0 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .class-mindmap {
+    width: 100%;
+  }
+  
+  @media (max-width: 720px) {
+    .class-mindmaps {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
