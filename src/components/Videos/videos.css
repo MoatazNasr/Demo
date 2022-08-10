@@ -1,0 +1,25 @@
+.videos-headline {
+  text-align: center;
+}
+.class-videos {
+    margin: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: white;
+    text-align: center;
+    column-gap: 4rem;
+    row-gap: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+
+.class-video {
+  width: 100%;
+}
+@media (max-width:768px) {
+  .class-videos{
+    grid-template-columns:  1fr
+  }
+}

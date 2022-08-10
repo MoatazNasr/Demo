@@ -1,0 +1,22 @@
+.sketches-headline {
+  text-align: center;
+}
+.class-sketches {
+  display: grid;
+  margin: 0 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  color: white;
+  column-gap: 4rem;
+  row-gap: 1rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.class-sketch {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .class-sketches {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

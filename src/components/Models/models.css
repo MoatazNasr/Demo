@@ -1,0 +1,14 @@
+.models-headline {
+  text-align: center;
+}
+.class-models {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  color: white;
+  text-align: center;
+}
+.class-model {
+  width: 100%;
+  height: 90vh;
+}

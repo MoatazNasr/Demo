@@ -1,0 +1,48 @@
+.classes {
+  margin: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: white;
+  text-align: center;
+  column-gap: 2.75rem;
+  row-gap: 1rem;
+}
+.classes div {
+  cursor: pointer;
+}
+.classes div img {
+  width: 70%;
+}
+.class {
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+.class:hover {
+  border: 2px white solid;
+  border-radius: 1rem;
+}
+.class img {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+.class h2 {
+  font-weight: 400;
+  margin-bottom: 0rem; 
+
+}
+.class h3 {
+ margin-top: 0rem; 
+}
+@media (max-width: 1200px) {
+  .classes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 860px) {
+  .classes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

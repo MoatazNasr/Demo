@@ -1,0 +1,15 @@
+.labs-headline {
+  text-align: center;
+}
+.class-labs {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.class-lab {
+  width: 100%;
+  height: 90vh;
+}
