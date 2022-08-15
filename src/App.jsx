@@ -97,7 +97,7 @@ function App() {
                 </NavLink>
               </li>
               <li className="links addclasses-link">
-                <NavLink to={0}>
+                <NavLink to='/'>
                   <NoteAddOutlinedIcon /> Add Classes
                 </NavLink>
               </li>
