@@ -16,7 +16,7 @@ const LMIframe = ({ src, title, classname, iframeTitle }) => {
         />
       ) : (
         <img
-          src="../../../Images/play-svgrepo-com.svg"
+          src="../../../Images/play-button-svgrepo-com (1).svg"
           alt="LabModel"
           onClick={() => setShowLabOrModel(true)}
           className='LM-image'
