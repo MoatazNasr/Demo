@@ -8,7 +8,7 @@ import NoteOutlinedIcon from "@mui/icons-material/NoteOutlined";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import Home from "./containers/home/Home";
 import Classes from "./containers/classes/Classes";
-import AddClasses from "./containers/addClasses/AddClasses";
+// import AddClasses from "./containers/addClasses/AddClasses";
 import Profile from "./containers/profile/Profile";
 import Class from "./components/class/Class";
 import Videos from "./components/Videos/Videos";
@@ -24,7 +24,20 @@ function App() {
   const [fullscreenElement, setFullscreenElement] = useState();
   useEffect(() => {
     if (!window.localStorage.getItem("classes")) {
-      window.localStorage.setItem("classes", JSON.stringify([]));
+      window.localStorage.setItem(
+        "classes",
+        JSON.stringify([
+          {
+            className: "Class 9",
+            chapterName: "Chapter 9 Forces and Laws of Motion",
+          },
+          {
+            className: "Class 7",
+            chapterName: "Chapter 1 Square and Square Roots",
+          },
+          {className:'Class 8',chapterName:'Chapter 2 Microorganisms'}
+        ])
+      );
     }
   }, []);
   useEffect(() => {
@@ -34,9 +47,7 @@ function App() {
       heading: "Jasper Lake",
     });
   }, []);
-  useEffect(() => {
-    console.log(fullscreenElement);
-  }, [fullscreenElement]);
+  useEffect(() => {}, [fullscreenElement]);
   window.addEventListener("resize", () => {
     setWidth(window.innerWidth);
   });
@@ -86,7 +97,7 @@ function App() {
                 </NavLink>
               </li>
               <li className="links addclasses-link">
-                <NavLink to="addclasses">
+                <NavLink to={0}>
                   <NoteAddOutlinedIcon /> Add Classes
                 </NavLink>
               </li>
@@ -160,7 +171,7 @@ function App() {
                   element={<Models />}
                 />
 
-                <Route path="/AddClasses" element={<AddClasses />} />
+                {/* <Route path="/AddClasses" element={<AddClasses />} /> */}
                 <Route path="/Profile" element={<Profile />} />
               </Routes>
             )}

@@ -3,7 +3,8 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { NavLink, useLocation } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import Firebase from "../../Firebase.js";
-import './laboratories.css';
+import LMIframe from "../LabsModels-Iframe/LMIframe.jsx";
+import "./laboratories.css";
 const Laboratories = () => {
   const location = useLocation();
   const [labs, setLabs] = useState([]);
@@ -20,7 +21,7 @@ const Laboratories = () => {
         setLabs(Object.entries(data[0].data));
       })
       .catch(() => {});
-  }, [location.state.chapterName,location.state.className]);
+  }, [location.state.chapterName, location.state.className]);
   return (
     <>
       <NavLink to={-1} className="navlink-back">
@@ -30,24 +31,18 @@ const Laboratories = () => {
         {location.state.chapterName + " Laboratories"}
       </h1>
       <div className="class-labs">
-        {labs.length > 0 ? (
-          labs.map((labsData, index) => (
-            <div key={Math.random() + index}>
-              <h2>{labsData[1][1]}</h2>
-              <iframe
-                src={labsData[1][0]}
-                className="class-lab"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="lab"
-                
-              />
-            </div>
-          ))
-        ) : (
-         ''
-        )}
+        {labs.length > 0
+          ? labs.map((labsData, index) => (
+              <div key={Math.random() + index}>
+                <LMIframe
+                  src={labsData[1][0]}
+                  classname="class-lab"
+                  title={labsData[1][1]}
+                  iframeTitle="lab"
+                />
+              </div>
+            ))
+          : ""}
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { NavLink, useLocation } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import Firebase from "../../Firebase.js";
+import LMIframe from "../LabsModels-Iframe/LMIframe.jsx";
 import './models.css';
 const Models = () => {
   const location = useLocation();
@@ -33,15 +34,12 @@ const Models = () => {
         {models.length > 0 ? (
           models.map((modelsData, index) => (
             <div key={Math.random() + index}>
-              <h2>{modelsData[1][1]}</h2>
-              <iframe
-                src={modelsData[1][0]}
-                className="class-model"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="model"
-              />
+            <LMIframe
+                  src={modelsData[1][0]}
+                  classname="class-model"
+                  title={modelsData[1][1]}
+                  iframeTitle="model"
+                />
             </div>
           ))
         ) : (
