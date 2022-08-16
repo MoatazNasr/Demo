@@ -35,7 +35,7 @@ function App() {
             className: "Class 7",
             chapterName: "Chapter 1 Square and Square Roots",
           },
-          {className:'Class 8',chapterName:'Chapter 2 Microorganisms'}
+          { className: "Class 8", chapterName: "Chapter 2 Microorganisms" },
         ])
       );
     }
@@ -78,13 +78,13 @@ function App() {
                 : "tabs-hide"
             }`}
           >
-            <div className="logo">
+            <NavLink className="navlink-back logo" to="/">
               <img
                 src="https://super-faloodeh-1d8e54.netlify.app/static/media/Vizlogo.87e30840.gif"
                 alt="logo"
               />
               <h1>vizuara</h1>
-            </div>
+            </NavLink>
             <ul>
               <li className="links">
                 <NavLink to="/" className="home-link">
@@ -97,7 +97,7 @@ function App() {
                 </NavLink>
               </li>
               <li className="links addclasses-link">
-                <NavLink to='/'>
+                <NavLink to="/">
                   <NoteAddOutlinedIcon /> Add Classes
                 </NavLink>
               </li>

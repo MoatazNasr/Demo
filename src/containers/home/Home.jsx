@@ -25,11 +25,9 @@ const Home = ({ gif, setGif }) => {
       ) : (
         <>
           {" "}
-          <h1 className="heading-1">Hello there,</h1>
+          <h1 className="heading-1">Explore your classes</h1>
           <h3 className="heading-3">
-            Our goal is to help you elevate your teaching experience.
-            <br />
-            Get started by adding a class!
+            By clicking on the classes tab on the left-hand menu
           </h3>
         </>
       )}
