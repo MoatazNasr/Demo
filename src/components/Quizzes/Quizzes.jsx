@@ -30,7 +30,7 @@ const Quizzes = ({setFullscreenElement}) => {
         <ArrowBackIcon fontSize="large" />
       </NavLink>
       <h1 className="labs-headline">
-        {location.state.chapterName + " Laboratories"}
+        {location.state.chapterName + "Pop Quiz"}
       </h1>
       <div className="class-labs ">
         {quizzes.length > 0
