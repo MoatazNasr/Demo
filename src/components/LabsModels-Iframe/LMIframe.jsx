@@ -15,6 +15,7 @@ const LMIframe = ({ src, title, classname, iframeTitle }) => {
             allowFullScreen
             title={iframeTitle}
           />
+          <button className="LM-close-button" onClick={()=>setShowLabOrModel(false)}>Close</button>
         </>
       ) : (
         <div className="LM-div">

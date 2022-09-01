@@ -29,7 +29,20 @@
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(8px);
 }
-
+.LM-close-button {
+  background: rgba(0, 0, 0, 0.7);
+  margin: 0.5rem 0;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.LM-close-button:hover {
+  background: rgba(0, 0, 0, 1);
+}
 @media (max-width: 768px) {
   .LM-div h2 {
     font-size: 1rem;

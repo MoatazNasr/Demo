@@ -1,6 +1,10 @@
 .add-classes{
     margin: 6rem 4rem;
 }
+.add-classes select:nth-of-type(1){
+    position: relative;
+    z-index: 5;
+}
 .add-classes h2:nth-of-type(2){
     margin-top: 4rem;
 }

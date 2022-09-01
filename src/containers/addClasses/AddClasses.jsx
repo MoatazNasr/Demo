@@ -80,7 +80,7 @@ const AddClasses = () => {
           <p onClick={() => chooseClass("Class 9")}>Class 9</p>
           <p onClick={() => chooseClass("Class 10")}>Class 10</p>
         </div>
-        <button onClick={() => setOnClassClick(!onClassClick)}>
+        <button onClick={() => {setOnClassClick(!onClassClick) ; setClassX() }}>
           {onClassClick ? (
             <KeyboardArrowUpIcon fontSize="large" />
           ) : (

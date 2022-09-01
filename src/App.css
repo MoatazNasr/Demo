@@ -158,9 +158,6 @@ body {
   cursor: pointer;
   transition: 0.5s all;
 }
-.exit-fullscreen-button{
-  
-}
 .fullscreen-button:hover{
   background: rgba(0, 0, 0, 1);
 }
